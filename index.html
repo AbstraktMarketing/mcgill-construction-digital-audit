@@ -328,11 +328,7 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
 </head>
 <body>
 
-<!-- ============================================================
-     AUDIT TEMPLATE — token + EDIT-region map
-     CURLY-BRACE TOKENS = swap directly from audit-intake.md (fill once, some recur)
-     <!-- EDIT --> ...  COLOR RULE for scores: red <40 (var(--red)) · amber 40-69 (var(--amber)) · green 70+ (var(--green))
-     ============================================================ -->
+
 
 <!-- ===== COVER ===== -->
 <div class="cover">
@@ -814,7 +810,11 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
   <div class="card-grid cols-2">
     <div class="card">
       <!-- EDIT: Top Organic Keywords table. REPEAT <tr> per keyword (position color: green #1-3, amber 4-10, red 11+). -->
-          <tr>
+
+      <table>
+        <thead><tr><th>Keyword</th><th>Position</th><th>Volume</th><th>Intent</th></tr></thead>
+        <tbody>
+<tr>
             <td>mcgill construction</td>
             <td style="color:var(--green);font-weight:700">#1</td>
             <td>140</td>
@@ -844,6 +844,9 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
             <td>70</td>
             <td><span class="badge red">Navigational</span></td>
           </tr>
+        </tbody>
+      </table>
+      
       <!-- /EDIT -->
     </div>
     <div class="card">
@@ -864,7 +867,11 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
       </div>
       <div style="margin-top:1rem">
         <!-- EDIT: Keywords by Intent table. REPEAT <tr> per intent; highlight the transactional row. -->
-            <tr>
+
+      <table>
+        <thead><tr><th>Intent</th><th>Keywords</th><th>Traffic/mo</th><th>What It Means</th></tr></thead>
+        <tbody>
+<tr>
               <td><span class="badge">Navigational</span></td>
               <td>17 keywords</td>
               <td style="color:var(--red)">0 visits</td>
@@ -888,6 +895,9 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
               <td>9 visits</td>
               <td>High intent but minimal coverage</td>
             </tr>
+        </tbody>
+      </table>
+      
       <!-- /EDIT -->
       </div>
     </div>
@@ -925,7 +935,12 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
     </div>
     <div class="card">
       <!-- EDIT: Service/Solution pages table. badge amber = Exists, badge red = Missing. REPEAT <tr> per page. -->
-          <tr>
+
+            <div class="card-label"><span class="dot amber"></span> Service &amp; Page Inventory — Current vs. Required</div>
+      <table>
+        <thead><tr><th>URL</th><th>Page / Service</th><th>Status</th></tr></thead>
+        <tbody>
+<tr>
             <td>/commercial-services/</td>
             <td>Asphalt Milling &amp; Paving</td>
             <td><span class="badge amber">Exists — Thin</span></td>
@@ -965,6 +980,9 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
             <td>Cook, Will, DuPage, Grundy, Kankakee County</td>
             <td><span class="badge red">Missing</span></td>
           </tr>
+        </tbody>
+      </table>
+      
       <!-- /EDIT -->
     </div>
   </div>
@@ -1000,7 +1018,8 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
     <h2 class="section-title">Local SEO &amp; Online Presence</h2>
   </div>
 
-  <div class="card-grid cols-4" style="margin-bottom:1rem">
+  <!-- Top row: 3 stat cards -->
+  <div class="card-grid cols-3" style="margin-bottom:1rem">
     <div class="card">
       <!-- NAP: tokenize the 5 fields. Conflict box is EDIT (remove if no NAP conflict). -->
       <div class="card-label"><span class="dot red"></span> NAP Audit</div>
@@ -1011,7 +1030,7 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
         <div><strong>Phone:</strong> (708) 924-1755</div>
         <div><strong>URL:</strong> mcgillasphalt.com</div>
       </div>
-      <!-- EDIT: NAP conflict callout — delete this block if there is no conflict -->
+      <!-- EDIT: NAP conflict callout -->
       <div style="background:var(--red-light);border:1px solid var(--red);border-radius:6px;padding:1rem;font-size:0.83rem;margin-top:0.75rem">
         <strong style="color:var(--red)">&#9888; NAP Conflict Detected — Opendi</strong><br>
         Opendi.com shows <em>Rosi Transportation</em> at 7635 W Lawndale Ave with a different phone number in place of McGill Asphalt. This wrong-business listing corrupts local authority signals and can misdirect customers searching for McGill by name.
@@ -1019,35 +1038,43 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
       <!-- /EDIT -->
     </div>
     <div class="card">
-      <!-- EDIT: Google Reviews. If GBP unverified use big-stat warning "Not Verified"; else show rating + count. -->
+      <!-- EDIT: Google Reviews -->
       <div class="big-stat warning" style="font-size:2rem">5.0 &#9733; / 3</div>
       <div class="stat-sub">3 Google reviews &mdash; perfect rating but far below the 25+ that drive local pack trust; competitors average 40&ndash;100+ reviews</div>
       <!-- /EDIT -->
     </div>
     <div class="card">
-      <!-- EDIT: Online presence rating (POOR/FAIR/GOOD) + active/issues/missing breakdown -->
+      <!-- EDIT: Online presence rating -->
       <div class="big-stat sm danger">POOR</div>
       <div class="stat-sub">7 directories active &middot; 1 listing with wrong business &middot; 12+ directories absent including Bing, Facebook, YellowPages</div>
       <!-- /EDIT -->
     </div>
-    <div class="card">
-      <!-- EDIT: Key listing status. badge green/amber/red per listing. REPEAT row per directory. -->
-          <tr><td>Google Business Profile</td><td><span class="badge green">Verified</span></td><td>5.0 &#9733; / 3 reviews &mdash; rating strong; volume critical</td></tr>
-          <tr><td>YP.com</td><td><span class="badge green">Active</span></td><td>NAP consistent</td></tr>
-          <tr><td>Cylex</td><td><span class="badge green">Active</span></td><td>NAP consistent</td></tr>
-          <tr><td>EZlocal / HotFrog</td><td><span class="badge green">Active</span></td><td>NAP consistent</td></tr>
-          <tr><td>ShowMeLocal / GoLocal247</td><td><span class="badge green">Active</span></td><td>GoLocal missing &ldquo;S&rdquo; in address (minor)</td></tr>
-          <tr><td>Opendi</td><td><span class="badge red">Wrong Business</span></td><td>Shows Rosi Transportation &mdash; immediate cleanup needed</td></tr>
-          <tr><td>Bing Places</td><td><span class="badge red">Not Present</span></td><td>Missing from Microsoft&rsquo;s search ecosystem entirely</td></tr>
-          <tr><td>Facebook Business</td><td><span class="badge red">Not Present</span></td><td>No business page; source of potential commercial leads</td></tr>
-          <tr><td>YellowPages / BBB</td><td><span class="badge red">Not Present</span></td><td>High-authority citation gaps</td></tr>
-      <!-- /EDIT -->
-    </div>
+  </div>
+
+  <!-- Full-width listing table row -->
+  <div class="card" style="margin-bottom:1rem">
+    <!-- EDIT: Key listing status. badge green/amber/red per listing. REPEAT row per directory. -->
+    <div class="card-label"><span class="dot red"></span> Directory &amp; Listing Status</div>
+    <table style="width:100%">
+      <thead><tr><th style="width:22%">Directory</th><th style="width:14%">Status</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Google Business Profile</td><td><span class="badge green">Verified</span></td><td>5.0 &#9733; / 3 reviews &mdash; perfect rating, but 3 reviews is far below the 25+ threshold that drives local pack trust</td></tr>
+        <tr><td>YP.com</td><td><span class="badge green">Active</span></td><td>NAP consistent</td></tr>
+        <tr><td>Cylex</td><td><span class="badge green">Active</span></td><td>NAP consistent</td></tr>
+        <tr><td>EZlocal / HotFrog</td><td><span class="badge green">Active</span></td><td>NAP consistent</td></tr>
+        <tr><td>ShowMeLocal / GoLocal247</td><td><span class="badge green">Active</span></td><td>Minor NAP variant: GoLocal247 missing &ldquo;S&rdquo; in street address (4956 Monitor Ave vs. 4956 S Monitor Ave)</td></tr>
+        <tr><td>Opendi</td><td><span class="badge red">Wrong Business</span></td><td>Displays <em>Rosi Transportation</em> at a different address &mdash; immediate correction required; any visitor is misdirected away from McGill</td></tr>
+        <tr><td>Bing Places</td><td><span class="badge red">Not Present</span></td><td>McGill is completely absent from Microsoft&rsquo;s search ecosystem; unclaimed Bing listing means zero visibility on Bing and Cortana</td></tr>
+        <tr><td>Facebook Business</td><td><span class="badge red">Not Present</span></td><td>No business page exists; Facebook is a high-authority citation source and a direct lead channel for commercial clients</td></tr>
+        <tr><td>YellowPages / BBB</td><td><span class="badge red">Not Present</span></td><td>Both are high-authority citation sources that strengthen local pack rankings; absence creates trust gaps with commercial buyers</td></tr>
+      </tbody>
+    </table>
+    <!-- /EDIT -->
   </div>
 
   <div class="card span-4" style="background:var(--charcoal);border-radius:10px;padding:2rem;border:none">
     <!-- EDIT: "The Local SEO Problem, in One Paragraph" — fully client-specific narrative. -->
-    <p style="font-size:0.85rem;color:var(--text);line-height:1.6">McGill Asphalt Construction Company has a verified Google Business Profile with a perfect 5.0 rating &mdash; a strong foundation &mdash; but three reviews is far too few to compete in the Chicago commercial paving market where trust is built on volume. Of the 20+ local directories Semrush scanned, only 7 carry accurate McGill information; Bing Places is completely absent, meaning the company is invisible on Microsoft&rsquo;s search network. The most urgent issue is Opendi, which actively displays <em>Rosi Transportation</em> at a different address under a near-identical phone number &mdash; any prospect who lands on that listing is sent to a competitor. Expanding citations across Cook, Will, DuPage, Grundy, and Kankakee county directories, and building a review generation process, would directly improve local pack rankings for the commercial terms McGill targets.</p>
+    <p style="font-size:0.85rem;color:rgba(255,255,255,0.82);line-height:1.6">McGill Asphalt Construction Company has a verified Google Business Profile with a perfect 5.0 rating &mdash; a strong foundation &mdash; but three reviews is far too few to compete in the Chicago commercial paving market where trust is built on volume. Of the 20+ local directories Semrush scanned, only 7 carry accurate McGill information; Bing Places is completely absent, meaning the company is invisible on Microsoft&rsquo;s search network. The most urgent issue is Opendi, which actively displays <em>Rosi Transportation</em> at a different address under a near-identical phone number &mdash; any prospect who lands on that listing is sent to a competitor. Expanding citations across Cook, Will, DuPage, Grundy, and Kankakee county directories, and building a review generation process, would directly improve local pack rankings for the commercial terms McGill targets.</p>
       <!-- /EDIT -->
   </div>
 </section>
@@ -1084,25 +1111,25 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
     </div>
     <div class="card">
       <!-- EDIT: rank-bars. winner (green) = top competitor, neutral = mid, loser (red) = CLIENT last. REPEAT rank-bar per competitor. -->
-        <div class="rank-bar">
-          <div class="bar-label">Rose Paving</div>
-          <div class="bar-track"><div class="bar-fill winner" style="width:88%"><span>88% — 11,269 visits/mo</span></div></div>
+        <div class="rank-bar winner">
+          <div class="name">Rose Paving</div>
+          <div class="score">88% &mdash; 11,269 visits/mo</div>
         </div>
-        <div class="rank-bar">
-          <div class="bar-label">We Pave The Way</div>
-          <div class="bar-track"><div class="bar-fill neutral" style="width:8%"><span>8%</span></div></div>
+        <div class="rank-bar neutral">
+          <div class="name">We Pave The Way</div>
+          <div class="score">8% &mdash; 1,024 visits/mo</div>
         </div>
-        <div class="rank-bar">
-          <div class="bar-label">Bigane Paving</div>
-          <div class="bar-track"><div class="bar-fill neutral" style="width:2%"><span>2%</span></div></div>
+        <div class="rank-bar neutral">
+          <div class="name">Bigane Paving</div>
+          <div class="score">2% &mdash; 239 visits/mo</div>
         </div>
-        <div class="rank-bar">
-          <div class="bar-label">MAT Asphalt</div>
-          <div class="bar-track"><div class="bar-fill neutral" style="width:1.5%"><span>1%</span></div></div>
+        <div class="rank-bar neutral">
+          <div class="name">MAT Asphalt</div>
+          <div class="score">1% &mdash; 167 visits/mo</div>
         </div>
-        <div class="rank-bar">
-          <div class="bar-label" style="color:var(--maroon);font-weight:700">McGill Asphalt</div>
-          <div class="bar-track"><div class="bar-fill loser" style="width:1%"><span>1% — 122 visits/mo</span></div></div>
+        <div class="rank-bar loser">
+          <div class="name" style="color:var(--maroon);font-weight:700">McGill Asphalt</div>
+          <div class="score">1% &mdash; 122 visits/mo</div>
         </div>
       <!-- /EDIT -->
     </div>
@@ -1110,6 +1137,10 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
 
   <div class="card span-4">
     <!-- EDIT: Competitive landscape table + share bar. CLIENT row uses class="highlight". REPEAT <tr> per domain; share-bar segments sum to 100%. -->
+    <div class="card-label"><span class="dot red"></span> Organic Traffic &amp; Authority — McGill vs. Competitors</div>
+    <table>
+      <thead><tr><th>Domain</th><th>Auth. Score</th><th>Keywords</th><th>Traffic/mo</th><th>Ref. Domains</th><th>Traffic Share</th></tr></thead>
+      <tbody>
         <tr class="highlight">
           <td><strong>mcgillasphalt.com</strong></td>
           <td style="color:var(--red);font-weight:700">8</td>
@@ -1158,7 +1189,8 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
       <div style="width:2%;background:var(--muted)">Bigane 2%</div>
       <div style="width:1%;background:var(--muted)">MAT 1%</div>
       <div style="width:1%;background:var(--red)">McGill 1%</div>
-      <!-- /EDIT -->
+    </div>
+    <!-- /EDIT -->
   </div>
 </section>
 
@@ -1179,7 +1211,12 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
   <div class="card-grid cols-2">
     <div class="card">
       <!-- EDIT: keyword-gap table. Priority badge red=Critical, amber=High, green=Medium. REPEAT <tr> per keyword. -->
-          <tr>
+
+            <div class="card-label"><span class="dot red"></span> High-Priority Keyword Gaps — McGill Not Ranked</div>
+      <table style="table-layout:fixed;width:100%"><colgroup><col style="width:36%"><col style="width:12%"><col style="width:10%"><col style="width:14%"><col style="width:16%"></colgroup>
+        <thead><tr><th>Keyword</th><th>Vol/mo</th><th>KD</th><th>McGill Rank</th><th>Priority</th></tr></thead>
+        <tbody>
+<tr>
             <td><strong>asphalt paving chicago</strong></td>
             <td>590</td>
             <td>50</td>
@@ -1242,11 +1279,19 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
             <td>#0</td>
             <td><span class="badge green">Medium</span></td>
           </tr>
+        </tbody>
+      </table>
+      
       <!-- /EDIT -->
     </div>
     <div class="card">
       <!-- EDIT: page-to-keyword map. REPEAT <tr> per recommended new page. -->
-          <tr>
+
+            <div class="card-label"><span class="dot amber"></span> Page-to-Keyword Map — New Pages Needed</div>
+      <table>
+        <thead><tr><th>New Page</th><th>Target Keyword Cluster</th><th>Rationale</th></tr></thead>
+        <tbody>
+<tr>
             <td>/chicago-asphalt-paving/</td>
             <td>asphalt paving chicago (590), paving contractors chicago (480), asphalt paving chicago il (320)</td>
             <td>Primary commercial service page &mdash; highest-volume opportunity</td>
@@ -1271,6 +1316,9 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
             <td>asphalt paving [county], paving contractor [county]</td>
             <td>Service-area pages for Grundy, Kankakee, DuPage expansion targets</td>
           </tr>
+        </tbody>
+      </table>
+      
       <!-- /EDIT -->
     </div>
   </div>
